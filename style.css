@@ -8,6 +8,7 @@
 
 body {
   background-color: whitesmoke;
+  color: black;
   margin: 0;
   height: 100svh;
   overflow: hidden;
@@ -97,6 +98,9 @@ body {
 .give-up,
 .message {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,6 +129,7 @@ button {
   height: var(--switch-height);
   width: var(--switch-width);
   cursor: pointer;
+  color: black;
 }
 
 .btn-no {
