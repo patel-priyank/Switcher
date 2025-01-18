@@ -21,8 +21,10 @@ const messages = [
 const checkboxes = Array.from(document.querySelectorAll('input[type=checkbox]'));
 const giveUpModal = document.querySelector('.give-up');
 const messageModal = document.querySelector('.message');
+const text = document.querySelector('.text');
 const btnNo = document.querySelector('.btn-no');
 const btnYes = document.querySelector('.btn-yes');
+const btnOkay = document.querySelector('.btn-ok');
 
 const getRandomIndex = array => Math.floor(Math.random() * array.length);
 
@@ -65,7 +67,11 @@ btnNo.addEventListener('click', () => {
 
 btnYes.addEventListener('click', () => {
   changeCount = 0;
-  messageModal.textContent = messages[getRandomIndex(messages)];
+  text.textContent = messages[getRandomIndex(messages)];
   messageModal.classList.remove('hide');
   giveUpModal.classList.add('hide');
+});
+
+btnOkay.addEventListener('click', () => {
+  messageModal.classList.add('hide');
 });
