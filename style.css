@@ -9,9 +9,12 @@
 body {
   background-color: whitesmoke;
   margin: 0;
-  min-height: 100svh;
+  height: 100svh;
+  overflow: hidden;
   display: grid;
   place-items: center;
+  font-family: sans-serif;
+  font-size: 1.25rem;
 }
 
 .container {
@@ -57,7 +60,7 @@ body {
   margin: 0;
   position: absolute;
   top: 50%;
-  left: calc(var(--switch-width) / 2);
+  left: calc(0.5 * var(--switch-width));
   transform: translate(-50%, -50%);
   opacity: 0;
   width: 0;
@@ -84,7 +87,54 @@ body {
 
 .switch .label-text {
   margin-left: 1rem;
-  font-family: sans-serif;
-  font-size: 1.25rem;
   user-select: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: calc(2 * var(--switch-width));
+  overflow: hidden;
+}
+
+.give-up,
+.message {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  width: calc(var(--switch-width) * 4);
+  height: calc(var(--switch-height) * 3 * 2);
+  justify-content: center;
+  box-shadow: 2px 2px 0 2px;
+}
+
+.message {
+  padding: 1rem;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  height: var(--switch-height);
+  width: var(--switch-width);
+  cursor: pointer;
+}
+
+.btn-no {
+  background-color: whitesmoke;
+}
+
+.btn-yes {
+  background-color: #ffb5b5;
+}
+
+.hide {
+  display: none;
 }
