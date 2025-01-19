@@ -129,11 +129,8 @@ button {
   height: var(--switch-height);
   width: var(--switch-width);
   cursor: pointer;
-  color: black;
-}
-
-.btn-no {
   background-color: whitesmoke;
+  color: black;
 }
 
 .btn-yes {
